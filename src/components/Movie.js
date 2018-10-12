@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Movie = ({ movie }) => {
   const poster_path_size = "http://image.tmdb.org/t/p/w300";
@@ -11,6 +12,10 @@ const Movie = ({ movie }) => {
       </div>
     </div>
   );
+};
+
+Movie.propTypes = {
+  movie: PropTypes.object.isRequired
 };
 
 export default Movie;

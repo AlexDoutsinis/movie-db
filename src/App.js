@@ -3,15 +3,16 @@ import "./App.css";
 import Header from "./components/Header";
 import Movies from "./components/Movies";
 import Footer from "./components/Footer";
+import { AppProvider } from "./AppContext";
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <AppProvider>
         <Header />
         <Movies />
         <Footer />
-      </React.Fragment>
+      </AppProvider>
     );
   }
 }
