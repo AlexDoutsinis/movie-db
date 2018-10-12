@@ -55,6 +55,7 @@ header .nav-bar li a {
 .movies {
   bottom: 40px;
   background-color: #f2f2f2;
+  padding-bottom: 55px;
 }
 
 .search-box {
