@@ -18,8 +18,8 @@
 
 header {
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://images.unsplash.com/photo-1537732367279-238b7cf9b937?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9f39582c39842afcfafa433604bf4fa9&auto=format&fit=crop&w=1868&q=80);
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.unsplash.com/photo-1537732367279-238b7cf9b937?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9f39582c39842afcfafa433604bf4fa9&auto=format&fit=crop&w=1868&q=80); */
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -37,7 +37,7 @@ header {
   text-transform: uppercase;
   word-spacing: 0.2em;
   letter-spacing: 0.1em;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .header-content p {
@@ -45,6 +45,31 @@ header {
   font-size: 1.2em;
   word-spacing: 0.1em;
   letter-spacing: 1px;
+}
+
+.header-content p:nth-child(3) {
+  margin-top: 4%;
+  padding-right: 30%;
+}
+
+.header-content p span {
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+
+.header-content p span:not(:last-child)::after {
+  content: "|";
+  margin-left: 4px;
+}
+
+.header-content .release {
+  position: relative;
+  bottom: -50px;
+}
+
+.header-content .release p:last-child {
+  font-size: 0.8em;
+  margin-top: 5px;
 }
 
 header .nav-bar li a {
