@@ -130,6 +130,7 @@ header .nav-bar li a {
   word-spacing: 0.1em;
   letter-spacing: 1px;
   text-transform: uppercase;
+  /* text-align: justify; */
 }
 
 footer div {
