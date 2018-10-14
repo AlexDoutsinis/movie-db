@@ -7,7 +7,7 @@ class Movies extends Component {
     return (
       <Consumer>
         {context => {
-          const { movies, getMovies, moviesPage } = context;
+          const { movies, getNextMoviesPage, moviesPage } = context;
           return (
             <section className="movies">
               <div className="row">
@@ -31,7 +31,7 @@ class Movies extends Component {
                     backgroundColor: "red",
                     marginTop: "50px"
                   }}
-                  onClick={() => getMovies(moviesPage + 1)}
+                  onClick={() => getNextMoviesPage(moviesPage + 1)}
                 >
                   Load more
                 </button>

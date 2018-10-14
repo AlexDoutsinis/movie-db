@@ -26,36 +26,40 @@ export class AppProvider extends Component {
     return this.setState({ ...this.state, genres });
   };
 
-  getMovies = async (page = 1) => {
+  getMoviePage = async page => {
     const res = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=${
         process.env.REACT_APP_API_KEY
       }&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`
     );
 
-    const moviesRes = await res.data;
-
-    const { results: movies, page: moviesPage } = moviesRes;
-
-    return this.setState({ ...this.state, movies, moviesPage });
+    return await res.data;
   };
 
-  getHeroMovie = async () => {
-    const res = await axios.get(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${
-        process.env.REACT_APP_API_KEY
-      }&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
-    );
+  getMovies = async () => {
+    // console.log(this.getMoviePage(1));
+    const { results: movies, page: moviesPage } = await this.getMoviePage(1);
 
-    const heroMovie = await res.data.results;
+    return this.setState({
+      ...this.state,
+      movies,
+      moviesPage,
+      heroMovie: movies[0]
+    });
+  };
 
-    return this.setState({ ...this.state, heroMovie: heroMovie[0] });
+  getNextMoviesPage = async page => {
+    const { results: newPage, page: nextPage } = await this.getMoviePage(page);
+    this.setState({
+      ...this.state,
+      movies: [...this.state.movies, ...newPage],
+      moviesPage: nextPage
+    });
   };
 
   async componentDidMount() {
     this.getGenres();
     this.getMovies();
-    this.getHeroMovie();
   }
 
   getMovieGenres = movie =>
@@ -73,7 +77,7 @@ export class AppProvider extends Component {
           heroMovie: this.state.heroMovie,
           movies: this.state.movies,
           getMovieGenres: this.getMovieGenres,
-          getMovies: this.getMovies,
+          getNextMoviesPage: this.getNextMoviesPage,
           moviesPage: this.state.moviesPage
         }}
       >
