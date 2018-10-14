@@ -7,7 +7,7 @@ class Movies extends Component {
     return (
       <Consumer>
         {context => {
-          const { movies } = context;
+          const { movies, getMovies, moviesPage } = context;
           return (
             <section className="movies">
               <div className="row">
@@ -23,6 +23,18 @@ class Movies extends Component {
                     <Movie key={movie.id} movie={movie} />
                   ))}
                 </React.Fragment>
+
+                <button
+                  style={{
+                    height: "100px",
+                    width: "200px",
+                    backgroundColor: "red",
+                    marginTop: "50px"
+                  }}
+                  onClick={() => getMovies(moviesPage + 1)}
+                >
+                  Load more
+                </button>
               </div>
             </section>
           );

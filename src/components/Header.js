@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Consumer } from "../AppContext";
-import axios from "axios";
 
 class Header extends Component {
   render() {
