@@ -24,17 +24,11 @@ class Movies extends Component {
                   ))}
                 </React.Fragment>
 
-                <button
-                  style={{
-                    height: "100px",
-                    width: "200px",
-                    backgroundColor: "red",
-                    marginTop: "50px"
-                  }}
-                  onClick={() => getNextMoviesPage(moviesPage + 1)}
-                >
-                  Load more
-                </button>
+                <div className="btn-box">
+                  <button onClick={() => getNextMoviesPage(moviesPage + 1)}>
+                    Load more
+                  </button>
+                </div>
               </div>
             </section>
           );

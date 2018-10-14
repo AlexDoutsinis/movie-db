@@ -14,16 +14,16 @@ class Header extends Component {
             <span key={genre.id}>{genre.name}</span>
           ));
 
+          const bgImageStyles = {
+            backgroundImage:
+              heroMovie.backdrop_path &&
+              `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backdrop_path_size}${
+                heroMovie.backdrop_path
+              })`
+          };
+
           return (
-            <header
-              style={{
-                backgroundImage:
-                  heroMovie.backdrop_path &&
-                  `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backdrop_path_size}${
-                    heroMovie.backdrop_path
-                  })`
-              }}
-            >
+            <header style={bgImageStyles}>
               <nav>
                 <div className="nav-row">
                   <ul className="nav-bar">

@@ -83,6 +83,26 @@ header .nav-bar li a {
   padding-bottom: 55px;
 }
 
+.movies .btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.movies .btn-box button {
+  display: inline-block;
+  padding: 0.6em 1.6em;
+  border: 0.2em solid #ccc;
+  margin-top: 5%;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  background-color: #f2f2f2;
+  color: #ccc;
+  text-align: center;
+  outline-width: 0;
+  cursor: pointer;
+}
+
 .search-box {
   width: 100%;
   padding: 20px 0 10px 0;
