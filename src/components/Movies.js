@@ -7,7 +7,19 @@ class Movies extends Component {
     return (
       <Consumer>
         {context => {
-          const { movies, getNextMoviesPage, moviesPage } = context;
+          const {
+            movies,
+            getNextMoviesPage,
+            moviesPage,
+            notMoviesLoaded,
+            moviesLoaded
+          } = context;
+
+          const onClick = () => {
+            notMoviesLoaded();
+            getNextMoviesPage(moviesPage + 1);
+          };
+
           return (
             <section className="movies">
               <div className="row">
@@ -24,11 +36,18 @@ class Movies extends Component {
                   ))}
                 </React.Fragment>
 
-                <div className="btn-box">
-                  <button onClick={() => getNextMoviesPage(moviesPage + 1)}>
-                    Load more
-                  </button>
-                </div>
+                {moviesLoaded ? (
+                  <div className="btn-box">
+                    <button onClick={onClick}>Load more</button>
+                  </div>
+                ) : (
+                  <div className="btn-box">
+                    <button>
+                      Load more
+                      <i className="fas fa-circle-notch fa-spin" />
+                    </button>
+                  </div>
+                )}
               </div>
             </section>
           );

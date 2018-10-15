@@ -11,7 +11,8 @@ export class AppProvider extends Component {
       // initialize genre_ids to prevent error in the first render
       genre_ids: []
     },
-    genres: []
+    genres: [],
+    moviesLoaded: true
   };
 
   getGenres = async () => {
@@ -53,11 +54,12 @@ export class AppProvider extends Component {
     this.setState({
       ...this.state,
       movies: [...this.state.movies, ...newPage],
-      moviesPage: nextPage
+      moviesPage: nextPage,
+      moviesLoaded: true
     });
   };
 
-  async componentDidMount() {
+  componentDidMount() {
     this.getGenres();
     this.getMovies();
   }
@@ -70,6 +72,8 @@ export class AppProvider extends Component {
       )
     );
 
+  notMoviesLoaded = () => this.setState({ moviesLoaded: false });
+
   render() {
     return (
       <AppContext.Provider
@@ -78,7 +82,9 @@ export class AppProvider extends Component {
           movies: this.state.movies,
           getMovieGenres: this.getMovieGenres,
           getNextMoviesPage: this.getNextMoviesPage,
-          moviesPage: this.state.moviesPage
+          moviesPage: this.state.moviesPage,
+          notMoviesLoaded: this.notMoviesLoaded,
+          moviesLoaded: this.state.moviesLoaded
         }}
       >
         {this.props.children}

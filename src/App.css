@@ -104,6 +104,13 @@ header .nav-bar li a {
   cursor: pointer;
 }
 
+.movies .btn-box i {
+  color: #ccc;
+  font-size: 0.8em;
+  display: inline-block;
+  margin-left: 0.6em;
+}
+
 .search-box {
   width: 100%;
   padding: 20px 0 10px 0;
