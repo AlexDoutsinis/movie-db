@@ -27,6 +27,8 @@ const Movie = ({ movie }) => {
             <div className="quick-infos">
               <h3>{movieTitle}</h3>
               <p>{genres}</p>
+              <i className="fas fa-heart" />
+              <p>{movie.vote_average}</p>
             </div>
           </div>
         );

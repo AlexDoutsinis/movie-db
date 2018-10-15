@@ -161,7 +161,7 @@ header .nav-bar li a {
   display: inline-block;
 }
 
-.movie-box .quick-infos p {
+.movie-box .quick-infos p:nth-child(2) {
   display: inline-block;
   width: 100%;
   padding: 3% 0 0 0;
@@ -171,13 +171,25 @@ header .nav-bar li a {
   letter-spacing: 0.12em;
 }
 
-.movie-box .quick-infos p span {
+.movie-box .quick-infos p:nth-child(2) span {
   display: inline-block;
   margin-right: 3px;
 }
 
-.movie-box .quick-infos p span:not(:last-child)::after {
+.movie-box .quick-infos p:nth-child(2) span:not(:last-child)::after {
   content: ",";
+}
+
+.movie-box .quick-infos .fas.fa-heart {
+  font-size: 1em;
+  color: #ec6f52;
+}
+
+.movie-box .quick-infos p:last-child {
+  display: inline-block;
+  margin-top: 3%;
+  font-size: 1.2em;
+  margin-left: 3.5%;
 }
 
 footer div {
