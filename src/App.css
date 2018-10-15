@@ -53,6 +53,7 @@ header {
 }
 
 .header-content p span {
+  display: inline-block;
   font-size: 0.8em;
   margin-right: 5px;
 }
@@ -143,14 +144,40 @@ header .nav-bar li a {
   width: 100%;
 }
 
-.movie-box h3 {
-  padding: 15px 15px 0 15px;
+.movie-box .quick-infos {
+  width: 90%;
+  margin: 3% auto 0 auto;
+}
+
+.movie-box .quick-infos h3 {
+  padding: 2% 0 0 0;
   font-size: 1em;
   font-weight: 400;
-  word-spacing: 0.1em;
   letter-spacing: 1px;
   text-transform: uppercase;
-  /* text-align: justify; */
+}
+
+.movie-box .quick-infos h3 span {
+  display: inline-block;
+}
+
+.movie-box .quick-infos p {
+  display: inline-block;
+  width: 100%;
+  padding: 3% 0 0 0;
+  color: #e5bc00;
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.movie-box .quick-infos p span {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.movie-box .quick-infos p span:not(:last-child)::after {
+  content: ",";
 }
 
 footer div {
