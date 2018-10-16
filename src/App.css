@@ -1,33 +1,59 @@
-.nav-row {
-  width: 60%;
-  margin: auto;
-}
-
 .row {
   width: 80%;
   margin: auto;
 }
 
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 40px 0;
-  text-transform: uppercase;
+header {
+  height: 10vh;
+  background-color: #333;
 }
 
-header {
-  height: 100vh;
+header .nav-bar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+  height: 10vh;
+}
+
+header .nav-bar li:first-child {
+  display: inline-block;
+  font-size: 1.5em;
+  border: solid #f5c518 1px;
+  padding: 0.3% 0.8%;
+  /* padding: 0.8%; */
+  background-color: #f5c518;
+  border-radius: 10px;
+}
+
+/* header .nav-bar li:last-child {
+  border: solid #01d277 1px;
+  padding: 0.8%;
+  background-color: #01d277;
+  border-radius: 10px;
+} */
+
+header .nav-bar li a:first-child {
+  font-family: "Roboto";
+  font-weight: black;
+  letter-spacing: 1px;
+  color: #191919;
+  text-decoration: none;
+}
+
+.hero {
+  height: 90vh;
   background-size: cover;
   background-position: center;
   color: #fff;
 }
 
-.header-content {
-  margin-top: 7%;
+.hero-content {
+  padding-top: 7%;
 }
 
-.header-content h1 {
+.hero-content h1 {
   font-size: 6em;
   font-weight: 100;
   text-transform: uppercase;
@@ -36,42 +62,37 @@ header {
   margin-bottom: 20px;
 }
 
-.header-content p {
+.hero-content p {
   font-weight: 300;
   font-size: 1.4em;
   word-spacing: 0.1em;
   letter-spacing: 1px;
 }
 
-.header-content p:nth-child(3) {
+.hero-content p:nth-child(3) {
   margin-top: 4%;
   padding-right: 30%;
 }
 
-.header-content p span {
+.hero-content p span {
   display: inline-block;
   font-size: 0.8em;
   margin-right: 5px;
 }
 
-.header-content p span:not(:last-child)::after {
+.hero-content p span:not(:last-child)::after {
   content: "|";
   margin-left: 4px;
 }
 
-.header-content .release {
+.hero-content .release {
   position: relative;
   bottom: -50px;
 }
 
-.header-content .release p:last-child {
+.hero-content .release p:last-child {
   font-size: 0.8em;
   margin-top: 5px;
-}
-
-header .nav-bar li a {
-  color: #fff;
-  text-decoration: none;
 }
 
 .movies {

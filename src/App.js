@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 import Movies from "./components/Movies";
 import Search from "./components/Search";
 import Footer from "./components/Footer";
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <AppProvider>
         <Header />
+        <Hero />
         <Search />
         <Movies />
         <Footer />
