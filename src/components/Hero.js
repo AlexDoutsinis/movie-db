@@ -27,7 +27,7 @@ class Hero extends Component {
               <div className="hero-content">
                 <div className="row">
                   <h1>{heroMovie.title}</h1>
-                  <p>{movieGenres}</p>
+                  <p className="genres">{movieGenres}</p>
                   <p>{heroMovie.overview}</p>
                   <div className="release">
                     <p>Release date</p>

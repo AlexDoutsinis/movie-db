@@ -22,17 +22,9 @@ header .nav-bar li:first-child {
   font-size: 1.5em;
   border: solid #f5c518 1px;
   padding: 0.3% 0.8%;
-  /* padding: 0.8%; */
   background-color: #f5c518;
   border-radius: 10px;
 }
-
-/* header .nav-bar li:last-child {
-  border: solid #01d277 1px;
-  padding: 0.8%;
-  background-color: #01d277;
-  border-radius: 10px;
-} */
 
 header .nav-bar li a:first-child {
   font-family: "Roboto";
@@ -55,7 +47,7 @@ header .nav-bar li a:first-child {
 
 .hero-content h1 {
   font-size: 6em;
-  font-weight: 100;
+  font-weight: 400;
   text-transform: uppercase;
   word-spacing: 0.2em;
   letter-spacing: 0.1em;
@@ -63,10 +55,14 @@ header .nav-bar li a:first-child {
 }
 
 .hero-content p {
-  font-weight: 300;
   font-size: 1.4em;
+  font-weight: 300;
   word-spacing: 0.1em;
   letter-spacing: 1px;
+}
+
+.hero-content .genres {
+  font-weight: 400;
 }
 
 .hero-content p:nth-child(3) {
@@ -88,6 +84,10 @@ header .nav-bar li a:first-child {
 .hero-content .release {
   position: relative;
   bottom: -50px;
+}
+
+.hero-content .release p:first-child {
+  font-weight: 400;
 }
 
 .hero-content .release p:last-child {
