@@ -26,13 +26,11 @@ header {
 }
 
 .header-content {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  margin-top: 7%;
 }
 
 .header-content h1 {
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 100;
   text-transform: uppercase;
   word-spacing: 0.2em;
@@ -42,7 +40,7 @@ header {
 
 .header-content p {
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1.4em;
   word-spacing: 0.1em;
   letter-spacing: 1px;
 }
@@ -102,6 +100,12 @@ header .nav-bar li a {
   text-align: center;
   outline-width: 0;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.movies .btn-box button:hover {
+  transform: translate(0, 3%);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .movies .btn-box i {

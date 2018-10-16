@@ -17,7 +17,7 @@ class Header extends Component {
           const bgImageStyles = {
             backgroundImage:
               heroMovie.backdrop_path &&
-              `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backdrop_path_size}${
+              `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backdrop_path_size}${
                 heroMovie.backdrop_path
               })`
           };
@@ -49,7 +49,7 @@ class Header extends Component {
                   <p>{movieGenres}</p>
                   <p>{heroMovie.overview}</p>
                   <div className="release">
-                    <p>Release Date</p>
+                    <p>Release date</p>
                     <p>{heroMovie.release_date}</p>
                   </div>
                 </div>
