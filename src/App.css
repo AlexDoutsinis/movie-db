@@ -5,7 +5,14 @@
 
 header {
   height: 10vh;
+}
+
+header.black {
   background-color: #333;
+}
+
+header.white {
+  background-color: #fff;
 }
 
 header .nav-bar {
@@ -195,7 +202,7 @@ header .nav-bar li a:first-child {
   display: inline-block;
   width: 100%;
   padding: 3% 0 0 0;
-  color: #e5bc00;
+  color: #f5c518;
   font-size: 0.75em;
   font-weight: 400;
   letter-spacing: 0.12em;

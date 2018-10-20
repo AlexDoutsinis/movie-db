@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ellipsize from "ellipsize";
 import { Consumer } from "../AppContext";
+import { Link } from "react-router-dom";
 
 const Movie = ({ movie }) => {
   const poster_path_size = "http://image.tmdb.org/t/p/w300";
@@ -20,10 +21,12 @@ const Movie = ({ movie }) => {
 
         return (
           <div className="movie-box">
-            <img
-              src={`${poster_path_size}${movie.poster_path}`}
-              alt={movie.title}
-            />
+            <Link to={`/movie/details/${movie.id}`}>
+              <img
+                src={`${poster_path_size}${movie.poster_path}`}
+                alt={movie.title}
+              />
+            </Link>
             <div className="quick-infos">
               <h3>{movieTitle}</h3>
               <p>{genres}</p>

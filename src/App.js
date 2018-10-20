@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Movies from "./components/Movies";
-import Search from "./components/Search";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import { AppProvider } from "./AppContext";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MovieDetails from "./components/MovieDetails";
 
 //TODO: fix unnecessary requests at home page for hero image and movies (fetch data every hour)
 //TODO: save each move to state which have been searched to prevent multiply requests for one same movie
@@ -15,11 +15,16 @@ class App extends Component {
   render() {
     return (
       <AppProvider>
-        <Header />
-        <Hero />
-        <Search />
-        <Movies />
-        <Footer />
+        <Router>
+          <Fragment>
+            <Header />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/movie/details/:id" component={MovieDetails} />
+            </Switch>
+            <Footer />
+          </Fragment>
+        </Router>
       </AppProvider>
     );
   }
