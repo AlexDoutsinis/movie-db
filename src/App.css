@@ -229,6 +229,7 @@ header .nav-bar li a:first-child {
   margin-left: 3.5%;
 }
 
+/* FOOTER */
 footer div {
   height: 80px;
   background-color: #fff;
@@ -247,4 +248,128 @@ footer ul li a {
   color: #b3b3b3;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+/* MOVIE DETAILS */
+.movie-details {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+}
+
+.movie-side-box {
+  width: 18.5%;
+  display: inline-block;
+  padding-top: 3%;
+}
+
+.poster-img {
+  box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2%;
+}
+
+.movie-main-box {
+  padding: 3% 3% 0 3%;
+  width: 81.5%;
+  display: inline-block;
+  background-color: #f2f2f2;
+}
+
+.img-backdrop {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+.movie-infos {
+  margin-top: 8%;
+}
+
+.movie-main-box h2 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 2%;
+  font-size: 1.7em;
+}
+
+.rating {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-top: 1.5%;
+  margin-right: 0.7%;
+}
+
+.vote {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.genres {
+  margin-top: 1%;
+  font-size: 1.2em;
+}
+
+.genresList {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: 300;
+}
+
+.genresList span {
+  margin-right: 1%;
+}
+
+.genresList span:not(:last-child)::after {
+  content: ",";
+}
+
+.overview {
+  margin-top: 1%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.overview-text {
+  font-size: 1.2em;
+}
+
+.cast-box {
+  width: 12.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cast {
+  display: inline-block;
+  width: 80%;
+  margin-right: 20%;
+}
+
+.cast-text {
+  margin: 1% 0 2% 0;
+  font-size: 1.2em;
+}
+
+.cast-name {
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.8em;
+  margin-top: 5%;
+}
+
+.text {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 4% 0;
+}
+
+.release-date,
+.length,
+.director {
+  font-weight: 300;
 }
