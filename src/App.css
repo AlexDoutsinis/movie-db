@@ -49,37 +49,35 @@ header .nav-bar li a:first-child {
 }
 
 .hero-content {
-  padding-top: 7%;
+  padding-top: 460px;
 }
 
-.hero-content h1 {
-  font-size: 6em;
+.hero-content .popular-text {
+  font-size: 1.1em;
   font-weight: 400;
   text-transform: uppercase;
   word-spacing: 0.2em;
   letter-spacing: 0.1em;
-  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 1.4em;
+  font-weight: 900;
+  text-transform: capitalize;
+  word-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  margin: 1% 0;
 }
 
 .hero-content p {
-  font-size: 1.4em;
-  font-weight: 300;
+  font-size: 1.1em;
+  font-weight: 400;
   word-spacing: 0.1em;
   letter-spacing: 1px;
 }
 
-.hero-content .genres {
-  font-weight: 400;
-}
-
-.hero-content p:nth-child(3) {
-  margin-top: 4%;
-  padding-right: 30%;
-}
-
 .hero-content p span {
   display: inline-block;
-  font-size: 0.8em;
   margin-right: 5px;
 }
 
@@ -88,18 +86,8 @@ header .nav-bar li a:first-child {
   margin-left: 4px;
 }
 
-.hero-content .release {
-  position: relative;
-  bottom: -50px;
-}
-
-.hero-content .release p:first-child {
-  font-weight: 400;
-}
-
-.hero-content .release p:last-child {
-  font-size: 0.8em;
-  margin-top: 5px;
+.rating-text {
+  margin-top: 1%;
 }
 
 .movies {
@@ -376,7 +364,7 @@ footer ul li a {
 }
 
 .full-screen-spinner {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,5 +372,5 @@ footer ul li a {
 
 .full-screen-spinner i {
   font-size: 3em;
-  color: #f2f2f2;
+  color: #b3b3b3;
 }

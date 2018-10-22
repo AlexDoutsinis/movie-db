@@ -51,12 +51,14 @@ export class AppProvider extends Component {
 
   getNextMoviesPage = async page => {
     const { results: newPage, page: nextPage } = await this.getMoviePage(page);
-    this.setState({
-      ...this.state,
-      movies: [...this.state.movies, ...newPage],
-      moviesPage: nextPage,
-      moviesLoaded: true
-    });
+    setTimeout(() => {
+      this.setState({
+        ...this.state,
+        movies: [...this.state.movies, ...newPage],
+        moviesPage: nextPage,
+        moviesLoaded: true
+      });
+    }, 1000);
   };
 
   componentDidMount() {

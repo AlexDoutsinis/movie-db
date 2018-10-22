@@ -10,9 +10,10 @@ class Hero extends Component {
         {context => {
           const { heroMovie, getMovieGenres } = context;
 
-          const movieGenres = getMovieGenres(heroMovie).map(genre => (
-            <span key={genre.id}>{genre.name}</span>
-          ));
+          const movieGenres = getMovieGenres(heroMovie).map((genre, index) => {
+            if (index < 2) return <span key={genre.id}>{genre.name}</span>;
+            return null;
+          });
 
           const bgImageStyles = {
             backgroundImage:
@@ -26,13 +27,10 @@ class Hero extends Component {
             <section className="hero" style={bgImageStyles}>
               <div className="hero-content">
                 <div className="row">
+                  <h3 className="popular-text">Popular</h3>
                   <h1>{heroMovie.title}</h1>
                   <p className="genres">{movieGenres}</p>
-                  <p>{heroMovie.overview}</p>
-                  <div className="release">
-                    <p>Release date</p>
-                    <p>{heroMovie.release_date}</p>
-                  </div>
+                  <p className="rating-text">{heroMovie.vote_average} Rating</p>
                 </div>
               </div>
             </section>

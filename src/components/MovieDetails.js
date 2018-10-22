@@ -55,20 +55,22 @@ class MovieDetails extends Component {
     const director = crew.filter(item => item.department === "Directing")[0]
       .name;
 
-    this.setState({
-      ...this.state,
-      title,
-      release_date,
-      runtime,
-      genres,
-      vote_average,
-      overview,
-      poster_path,
-      backdrop_path,
-      cast: castList,
-      director,
-      loading: false
-    });
+    setTimeout(() => {
+      this.setState({
+        ...this.state,
+        title,
+        release_date,
+        runtime,
+        genres,
+        vote_average,
+        overview,
+        poster_path,
+        backdrop_path,
+        cast: castList,
+        director,
+        loading: false
+      });
+    }, 1000);
   };
 
   loading = () => this.setState({ ...this.state, loading: true });
@@ -76,6 +78,7 @@ class MovieDetails extends Component {
   componentDidMount() {
     this.loading();
     this.getMovie();
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -126,8 +129,9 @@ class MovieDetails extends Component {
     const settings = {
       infinite: true,
       speed: 500,
-      slidesToShow: 8,
-      slidesToScroll: 1
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      swipeToSlide: true
     };
 
     if (this.state.loading)
