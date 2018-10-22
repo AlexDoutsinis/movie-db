@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
+import Slider from "react-slick";
 
 const api = "https://api.themoviedb.org/3/movie";
 const poster_path_size = "http://image.tmdb.org/t/p/w185";
@@ -62,7 +63,7 @@ class MovieDetails extends Component {
 
     const { cast, crew } = await res.data;
 
-    const castList = cast.filter((item, index) => index < 8);
+    const castList = cast.filter((item, index) => index < 14);
 
     const director = crew.filter(item => item.department === "Directing")[0]
       .name;
@@ -96,17 +97,26 @@ class MovieDetails extends Component {
       backdrop_path && `${backdrop_path_size}${backdrop_path}`;
 
     const cast = this.state.cast.map(item => (
-      // <div key={item.id} className="cast-box">
-      <div key={item.id} className="cast">
-        <img src={`${profile_path_size}${item.profile_path}`} alt={item.name} />
+      <div key={item.id}>
+        <img
+          className="cast-img"
+          src={`${profile_path_size}${item.profile_path}`}
+          alt={item.name}
+        />
         <p className="cast-name">{item.name}</p>
       </div>
-      // </div>
     ));
 
     const imgBackdropStyles = { backgroundImage: `url(${imgBackdrop})` };
 
     const length = moment.duration(runtime, "minutes").format("h [hr] m [min]");
+
+    const settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 8,
+      slidesToScroll: 1
+    };
 
     return (
       <section className="movie-details">
@@ -131,7 +141,9 @@ class MovieDetails extends Component {
           <div className="overview-text">Overview</div>
           <p className="overview">{overview}</p>
           <p className="cast-text">Cast</p>
-          <div className="cast-box">{cast}</div>
+          <div>
+            <Slider {...settings}>{cast}</Slider>
+          </div>
         </div>
       </section>
     );

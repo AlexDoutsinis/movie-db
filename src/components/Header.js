@@ -1,5 +1,6 @@
 import React from "react";
 import { Consumer } from "../AppContext";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
               <div className="row">
                 <ul className="nav-bar">
                   <li>
-                    <a href="#">MYMDB</a>
+                    <Link to="/">MYMDB</Link>
                   </li>
                 </ul>
               </div>

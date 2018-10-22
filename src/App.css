@@ -337,25 +337,22 @@ footer ul li a {
   font-size: 1.2em;
 }
 
-.cast-box {
-  width: 12.5%;
-  display: flex;
-  flex-direction: row;
-}
-
-.cast {
+.cast-img {
   display: inline-block;
-  width: 80%;
-  margin-right: 20%;
+  margin: auto;
 }
 
 .cast-text {
-  margin: 1% 0 2% 0;
+  margin: 1% 0 2.5% 0;
   font-size: 1.2em;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: #333;
+}
+
 .cast-name {
-  width: 100%;
   text-align: center;
   font-weight: 300;
   font-size: 0.8em;
