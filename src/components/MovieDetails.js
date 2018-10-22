@@ -20,7 +20,8 @@ class MovieDetails extends Component {
     poster_path: "",
     backdrop_path: "",
     director: "",
-    cast: []
+    cast: [],
+    loading: false
   };
 
   getMovie = async () => {
@@ -29,6 +30,12 @@ class MovieDetails extends Component {
     const res = await axios.get(
       `${api}/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`
     );
+
+    const res2 = await axios.get(
+      `${api}/${movieId}/credits?api_key=${process.env.REACT_APP_API_KEY}`
+    );
+
+    const [movie, credits] = await Promise.all([res, res2]);
 
     const {
       title,
@@ -39,7 +46,14 @@ class MovieDetails extends Component {
       overview,
       poster_path,
       backdrop_path
-    } = await res.data;
+    } = await movie.data;
+
+    const { cast, crew } = await credits.data;
+
+    const castList = cast.filter((item, index) => index < 12);
+
+    const director = crew.filter(item => item.department === "Directing")[0]
+      .name;
 
     this.setState({
       ...this.state,
@@ -50,30 +64,18 @@ class MovieDetails extends Component {
       vote_average,
       overview,
       poster_path,
-      backdrop_path
+      backdrop_path,
+      cast: castList,
+      director,
+      loading: false
     });
   };
 
-  getCredits = async () => {
-    const movieId = this.props.match.params.id;
-
-    const res = await axios.get(
-      `${api}/${movieId}/credits?api_key=${process.env.REACT_APP_API_KEY}`
-    );
-
-    const { cast, crew } = await res.data;
-
-    const castList = cast.filter((item, index) => index < 14);
-
-    const director = crew.filter(item => item.department === "Directing")[0]
-      .name;
-
-    this.setState({ ...this.state, cast: castList, director });
-  };
+  loading = () => this.setState({ ...this.state, loading: true });
 
   componentDidMount() {
+    this.loading();
     this.getMovie();
-    this.getCredits();
   }
 
   render() {
@@ -92,7 +94,9 @@ class MovieDetails extends Component {
     const movieGenres = genres.map(genre => (
       <span key={genre.id}>{genre.name}</span>
     ));
+
     const imgPoster = poster_path && `${poster_path_size}${poster_path}`;
+
     const imgBackdrop =
       backdrop_path && `${backdrop_path_size}${backdrop_path}`;
 
@@ -125,6 +129,13 @@ class MovieDetails extends Component {
       slidesToShow: 8,
       slidesToScroll: 1
     };
+
+    if (this.state.loading)
+      return (
+        <div className="full-screen-spinner">
+          <i className="fas fa-circle-notch fa-spin" />
+        </div>
+      );
 
     return (
       <section className="movie-details">

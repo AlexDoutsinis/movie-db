@@ -374,3 +374,15 @@ footer ul li a {
 .director {
   font-weight: 300;
 }
+
+.full-screen-spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen-spinner i {
+  font-size: 3em;
+  color: #f2f2f2;
+}
