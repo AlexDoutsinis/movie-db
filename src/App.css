@@ -337,6 +337,10 @@ footer ul li a {
   font-size: 1.2em;
 }
 
+.cast-box {
+  padding-bottom: 3%;
+}
+
 .cast-img {
   display: inline-block;
   margin: auto;

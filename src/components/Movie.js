@@ -23,7 +23,11 @@ const Movie = ({ movie }) => {
           <div className="movie-box">
             <Link to={`/movie/details/${movie.id}`}>
               <img
-                src={`${poster_path_size}${movie.poster_path}`}
+                src={
+                  movie.poster_path
+                    ? `${poster_path_size}${movie.poster_path}`
+                    : "https://via.placeholder.com/224x337"
+                }
                 alt={movie.title}
               />
             </Link>

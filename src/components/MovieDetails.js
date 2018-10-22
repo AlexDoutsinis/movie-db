@@ -100,14 +100,22 @@ class MovieDetails extends Component {
       <div key={item.id}>
         <img
           className="cast-img"
-          src={`${profile_path_size}${item.profile_path}`}
+          src={
+            item.profile_path
+              ? `${profile_path_size}${item.profile_path}`
+              : "https://via.placeholder.com/92x138"
+          }
           alt={item.name}
         />
         <p className="cast-name">{item.name}</p>
       </div>
     ));
 
-    const imgBackdropStyles = { backgroundImage: `url(${imgBackdrop})` };
+    const imgBackdropStyles = {
+      backgroundImage: `url(${
+        imgBackdrop ? imgBackdrop : "https://via.placeholder.com/772x433"
+      })`
+    };
 
     const length = moment.duration(runtime, "minutes").format("h [hr] m [min]");
 
@@ -121,7 +129,11 @@ class MovieDetails extends Component {
     return (
       <section className="movie-details">
         <div className="movie-side-box">
-          <img className="poster-img" src={imgPoster} alt={`${title} poster`} />
+          <img
+            className="poster-img"
+            src={imgPoster ? imgPoster : "https://via.placeholder.com/185x278"}
+            alt={`${title} poster`}
+          />
           <div className="movie-infos">
             <div className="text">Release date</div>
             <p className="release-date">{release_date}</p>
@@ -141,7 +153,7 @@ class MovieDetails extends Component {
           <div className="overview-text">Overview</div>
           <p className="overview">{overview}</p>
           <p className="cast-text">Cast</p>
-          <div>
+          <div className="cast-box">
             <Slider {...settings}>{cast}</Slider>
           </div>
         </div>
