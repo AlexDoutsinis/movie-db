@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Consumer } from "../AppContext";
 import Swiper from "react-id-swiper";
+import { Link } from "react-router-dom";
 
 class Hero extends Component {
   render() {
@@ -25,22 +26,26 @@ class Hero extends Component {
                   `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backdrop_path_size}${
                     movie.backdrop_path
                   })`,
-                height: "90vh"
+                height: "90vh",
+                textDecoration: "none"
               };
 
               return (
-                <div
+                <Link
                   key={movie.id}
                   className="hero hero-content"
                   style={bgImageStyles}
+                  to={`/movie/details/${movie.id}`}
                 >
-                  <div className="row">
-                    <h3 className="popular-text">Popular</h3>
-                    <h1>{movie.title}</h1>
-                    <p className="genres">{movieGenres}</p>
-                    <p className="rating-text">{movie.vote_average} Rating</p>
+                  <div>
+                    <div className="row">
+                      <h3 className="popular-text">Popular</h3>
+                      <h1>{movie.title}</h1>
+                      <p className="genres">{movieGenres}</p>
+                      <p className="rating-text">{movie.vote_average} Rating</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             });
 
