@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
+import "swiper/dist/css/swiper.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/Footer";

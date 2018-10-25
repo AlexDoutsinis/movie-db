@@ -7,10 +7,7 @@ export class AppProvider extends Component {
   state = {
     movies: [],
     moviesPage: 1,
-    heroMovie: {
-      // initialize genre_ids to prevent error in the first render
-      genre_ids: []
-    },
+    heroMovies: [],
     genres: [],
     moviesLoaded: true
   };
@@ -45,7 +42,7 @@ export class AppProvider extends Component {
       ...this.state,
       movies,
       moviesPage,
-      heroMovie: movies[0]
+      heroMovies: movies.filter((movie, index) => index < 3)
     });
   };
 
@@ -80,7 +77,7 @@ export class AppProvider extends Component {
     return (
       <AppContext.Provider
         value={{
-          heroMovie: this.state.heroMovie,
+          heroMovies: this.state.heroMovies,
           movies: this.state.movies,
           getMovieGenres: this.getMovieGenres,
           getNextMoviesPage: this.getNextMoviesPage,

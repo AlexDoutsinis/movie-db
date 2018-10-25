@@ -3,6 +3,7 @@ import axios from "axios";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
 import Slider from "react-slick";
+import Loader from "./Loader";
 
 const api = "https://api.themoviedb.org/3/movie";
 const poster_path_size = "http://image.tmdb.org/t/p/w185";
@@ -133,12 +134,7 @@ class MovieDetails extends Component {
       swipeToSlide: true
     };
 
-    if (this.state.loading)
-      return (
-        <div className="full-screen-spinner">
-          <i className="fas fa-circle-notch fa-spin" />
-        </div>
-      );
+    if (this.state.loading) return <Loader />;
 
     return (
       <section className="movie-details">

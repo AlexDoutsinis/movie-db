@@ -42,7 +42,6 @@ header .nav-bar li a:first-child {
 }
 
 .hero {
-  height: 90vh;
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -359,17 +358,17 @@ footer ul li a {
   font-weight: 300;
 }
 
-.full-screen-spinner {
+/* .full-screen-spinner {
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.full-screen-spinner i {
+/* .full-screen-spinner i {
   font-size: 3em;
   color: #b3b3b3;
-}
+} */
 
 /* NEW SEARCH INPUT STYLES */
 .Search-result-container {
@@ -399,4 +398,59 @@ footer ul li a {
 
 .Search-result:hover {
   color: #fff;
+}
+
+/* LOADER */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ctnr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.ldr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.ldr-blk {
+  height: 35%;
+  width: 35%;
+  -webkit-animation: pulse 0.75s ease-in infinite alternate;
+  animation: pulse 0.75s ease-in infinite alternate;
+  background-color: #b3b3b3;
+}
+
+.an_delay {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
 }
