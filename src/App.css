@@ -134,18 +134,14 @@ header .nav-bar li a:first-child {
   background-color: #f2f2f2;
 }
 
-.search-box form {
-  width: 100%;
-}
-
-.search-box form i {
+.search-box i {
   display: inline-block;
   width: 1.3%;
   font-size: 1em;
   color: #b3b3b3;
 }
 
-.search-box form input {
+.search-box input {
   display: inline-block;
   width: 98.7%;
   height: 60px;
@@ -373,4 +369,34 @@ footer ul li a {
 .full-screen-spinner i {
   font-size: 3em;
   color: #b3b3b3;
+}
+
+/* NEW SEARCH INPUT STYLES */
+.Search-result-container {
+  position: relative;
+  width: 100%;
+  max-height: 299px;
+  overflow-y: auto;
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-shadow: 0px 0px 40px 0px#333;
+  margin-top: 10px;
+}
+
+.Search-no-result {
+  color: #ccc;
+  padding: 15px 0 15px 35px;
+  border-bottom: 1px solid #ccc;
+}
+
+.Search-result {
+  color: #ccc;
+  padding: 15px 0 15px 35px;
+  border-bottom: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.Search-result:hover {
+  color: #fff;
 }
