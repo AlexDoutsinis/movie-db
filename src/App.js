@@ -11,6 +11,12 @@ import MovieDetails from "./components/MovieDetails";
 //TODO: fix unnecessary requests at home page for hero image and movies (fetch data every hour)
 //TODO: save each move to state which have been searched to prevent multiply requests for one same movie
 //TODO: maybe split AppContext file
+//TODO: add local storage
+//TODO: add spinner to home page
+//TODO: add animations
+//TODO: add responsiveness
+//TODO: add details for cast
+//TODO: code refactor
 
 class App extends Component {
   render() {
