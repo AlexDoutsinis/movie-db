@@ -3,6 +3,7 @@
   margin: auto;
 }
 
+/* HEADER */
 header {
   height: 10vh;
   background: linear-gradient(to right, #000000, #434343);
@@ -34,6 +35,7 @@ header .nav-bar li .link {
   text-decoration: none;
 }
 
+/* HERO */
 .hero {
   background-size: cover;
   background-position: center;
@@ -82,6 +84,7 @@ header .nav-bar li .link {
   margin-top: 1%;
 }
 
+/* MOVIES */
 .movies {
   background-color: #f2f2f2;
   padding-bottom: 55px;
@@ -120,6 +123,7 @@ header .nav-bar li .link {
   margin-left: 0.6em;
 }
 
+/* SEARCH */
 .search-box {
   width: 100%;
   padding: 1.5% 0 0.8% 0;
@@ -145,6 +149,7 @@ header .nav-bar li .link {
   border-bottom: solid 1px #b3b3b3;
 }
 
+/* MOVIE */
 .movie-box {
   width: 22%;
   margin: 2.5% 2.5% 0 0;
@@ -351,7 +356,7 @@ footer ul li a {
   font-weight: 300;
 }
 
-/* NEW SEARCH INPUT STYLES */
+/* SEARCH RESULTS */
 .Search-result-container {
   position: relative;
   width: 100%;
