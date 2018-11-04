@@ -6,12 +6,13 @@ const Footer = () => {
       <div className="row">
         <ul>
           <li>
-            <a href="#">MYMDB</a>
+            <a href="/">MOVIE DB</a>
           </li>
           <li>
-            <p>© Copyright all rights reserved 2018 — MYMDB</p>
+            <p>© Copyright all rights reserved 2018 — MOVIE DB</p>
           </li>
           <li>
+            Powered by &nbsp;
             <a
               href="https://www.themoviedb.org/"
               target="_blank"

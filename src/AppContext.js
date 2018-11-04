@@ -35,15 +35,16 @@ export class AppProvider extends Component {
   };
 
   getMovies = async () => {
-    // console.log(this.getMoviePage(1));
     const { results: movies, page: moviesPage } = await this.getMoviePage(1);
 
-    return this.setState({
-      ...this.state,
-      movies,
-      moviesPage,
-      heroMovies: movies.filter((movie, index) => index < 3)
-    });
+    setTimeout(() => {
+      this.setState({
+        ...this.state,
+        movies,
+        moviesPage,
+        heroMovies: movies.filter((movie, index) => index < 3)
+      });
+    }, 1000);
   };
 
   getNextMoviesPage = async page => {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Consumer } from "../AppContext";
 import Swiper from "react-id-swiper";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 class Hero extends Component {
   render() {
@@ -11,6 +12,8 @@ class Hero extends Component {
       <Consumer>
         {context => {
           const { heroMovies, getMovieGenres } = context;
+
+          if (heroMovies.length < 1) return <Loader />;
 
           const heroCarousel =
             heroMovies.length > 0 &&

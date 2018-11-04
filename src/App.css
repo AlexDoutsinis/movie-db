@@ -5,14 +5,7 @@
 
 header {
   height: 10vh;
-}
-
-header.black {
   background: linear-gradient(to right, #000000, #434343);
-}
-
-header.white {
-  background-color: #fff;
 }
 
 header .nav-bar {
@@ -26,14 +19,14 @@ header .nav-bar {
 
 header .nav-bar li:first-child {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.4em;
   border: solid #f5c518 1px;
-  padding: 0.3% 0.8%;
+  padding: 4px 8px;
   background-color: #f5c518;
   border-radius: 10px;
 }
 
-header .nav-bar li a:first-child {
+header .nav-bar li .link {
   font-family: "Roboto";
   font-weight: black;
   letter-spacing: 1px;
