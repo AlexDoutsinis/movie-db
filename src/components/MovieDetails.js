@@ -131,7 +131,15 @@ class MovieDetails extends Component {
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 1,
-      swipeToSlide: true
+      swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 1240,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
     };
 
     if (this.state.loading) return <Loader />;
@@ -156,9 +164,9 @@ class MovieDetails extends Component {
         <div className="movie-main-box">
           <div className="img-backdrop" style={imgBackdropStyles} />
           <h2>{title}</h2>
-          <p className="rating">Rating:</p>
+          <p className="rating rating-dt">Rating:</p>
           <p className="vote">{vote_average}</p>
-          <div className="genres">Genres</div>
+          <div className="genres genres-dt">Genres</div>
           <p className="genresList">{movieGenres}</p>
           <div className="overview-text">Overview</div>
           <p className="overview">{overview}</p>

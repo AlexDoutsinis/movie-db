@@ -89,7 +89,9 @@ class Search extends Component {
     return (
       <div className="search-box">
         <div className="row">
-          <i className="fas fa-search" />
+          <span className="search-icon">
+            <i className="fas fa-search" />
+          </span>
           <input
             type="text"
             placeholder="Search for a movie"

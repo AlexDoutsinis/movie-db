@@ -29,23 +29,26 @@ class Hero extends Component {
                   `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backdrop_path_size}${
                     movie.backdrop_path
                   })`,
-                height: "90vh",
                 textDecoration: "none"
               };
 
               return (
                 <Link
                   key={movie.id}
-                  className="hero hero-content"
+                  className="hero"
                   style={bgImageStyles}
                   to={`/movie/details/${movie.id}`}
                 >
-                  <div>
-                    <div className="row">
-                      <h3 className="popular-text">Popular</h3>
-                      <h1>{movie.title}</h1>
-                      <p className="genres">{movieGenres}</p>
-                      <p className="rating-text">{movie.vote_average} Rating</p>
+                  <div className="hero-box">
+                    <div className="hero-content">
+                      <div className="row">
+                        <h3 className="popular-text">Popular</h3>
+                        <h1>{movie.title}</h1>
+                        <p className="genres">{movieGenres}</p>
+                        <p className="rating-text">
+                          {movie.vote_average} Rating
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </Link>
