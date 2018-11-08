@@ -1,11 +1,11 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const api = "https://api.themoviedb.org/3/search/movie?api_key=";
 
-class Search extends PureComponent {
+class Search extends Component {
   state = {
     searchResults: [],
     searchQuery: "",
