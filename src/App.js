@@ -8,14 +8,11 @@ import { AppProvider } from "./AppContext";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MovieDetails from "./components/MovieDetails";
 
-//TODO: fix unnecessary requests at home page for hero image and movies (fetch data every hour)
-//TODO: save each move to state which have been searched to prevent multiply requests for one same movie
 //TODO: maybe split AppContext file
-//TODO: add local storage
-//TODO: add spinner to home page
+//TODO: add local storage - done
+//TODO: add spinner to home page - done
 //TODO: add animations
-//TODO: add responsiveness
-//TODO: add details for cast
+//TODO: add responsiveness - done
 //TODO: code refactor
 
 class App extends Component {

@@ -56,29 +56,44 @@ class MovieDetails extends Component {
     const director = crew.filter(item => item.department === "Directing");
 
     setTimeout(() => {
-      this.setState({
-        ...this.state,
-        title,
-        release_date,
-        runtime,
-        genres,
-        vote_average,
-        overview,
-        poster_path,
-        backdrop_path,
-        cast: castList,
-        director: director[0] ? director[0].name : "Unknown",
-        loading: false
-      });
+      this.setState(
+        {
+          ...this.state,
+          title,
+          release_date,
+          runtime,
+          genres,
+          vote_average,
+          overview,
+          poster_path,
+          backdrop_path,
+          cast: castList,
+          director: director[0] ? director[0].name : "Unknown",
+          loading: false
+        },
+        () => localStorage.setItem(`${movieId}`, JSON.stringify(this.state))
+      );
     }, 1000);
   };
 
   loading = () => this.setState({ ...this.state, loading: true });
 
   componentDidMount() {
+    const scrollToTop = () => window.scrollTo(0, 0);
+
     this.loading();
+    const movieId = this.props.match.params.id;
+    // prevent unnecessary api calls using local storage
+    if (localStorage.getItem(`${movieId}`))
+      return this.setState(
+        {
+          ...JSON.parse(localStorage.getItem(`${movieId}`))
+        },
+        () => scrollToTop()
+      );
+
     this.getMovie();
-    window.scrollTo(0, 0);
+    scrollToTop();
   }
 
   render() {
