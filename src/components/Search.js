@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const api = "https://api.themoviedb.org/3/search/movie?api_key=";
+const poster_path_size = "http://image.tmdb.org/t/p/w92";
 
 class Search extends Component {
   state = {
@@ -65,8 +66,19 @@ class Search extends Component {
               className="Search-result"
               onClick={() => this.handleRedirect(result.id)}
             >
-              <div>{result.title}</div>
-              <div>{result.release_date}</div>
+              <div className="search-img-box">
+                <img
+                  src={
+                    result.poster_path &&
+                    `${poster_path_size}${result.poster_path}`
+                  }
+                  alt=""
+                />
+              </div>
+              <div className="Search-result-title">{result.title}</div>
+              <div className="Search-result-rel-date">
+                {result.release_date}
+              </div>
             </div>
           ))}
         </div>
