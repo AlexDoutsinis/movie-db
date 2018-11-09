@@ -20,7 +20,7 @@ header .nav-bar {
 
 header .nav-bar li:first-child {
   display: inline-block;
-  font-size: 1.4em;
+  font-size: 1.2em;
   border: solid #f5c518 1px;
   padding: 4px 8px;
   background-color: #f5c518;
@@ -594,7 +594,7 @@ footer ul li a {
 
 @media (max-width: 1024px) {
   header .nav-bar li:first-child {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .movie-box {
@@ -684,7 +684,7 @@ footer ul li a {
 
 @media (max-width: 768px) {
   header .nav-bar li:first-child {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   .search-img-box img {
@@ -769,7 +769,7 @@ footer ul li a {
   }
 
   header .nav-bar li:first-child {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   .search-box {
