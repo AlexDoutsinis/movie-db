@@ -52,8 +52,6 @@ class MovieDetails extends Component {
 
     const { cast, crew } = await credits.data;
 
-    const castList = cast.filter((item, index) => index < 12);
-
     const director = crew.filter(item => item.department === "Directing");
 
     setTimeout(() => {
@@ -68,7 +66,7 @@ class MovieDetails extends Component {
           overview,
           poster_path,
           backdrop_path,
-          cast: castList,
+          cast,
           director: director[0] ? director[0].name : "Unknown",
           loading: false
         },
