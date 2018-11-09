@@ -13,7 +13,7 @@ import MovieDetails from "./components/MovieDetails";
 //TODO: add animations
 //TODO: add responsiveness - done
 //TODO: add a NotFound component
-//TODO: code refactor
+//TODO: code refactor - done
 
 const App = () => (
   <AppProvider>

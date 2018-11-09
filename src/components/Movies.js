@@ -1,6 +1,7 @@
 import React from "react";
 import Movie from "./Movie";
 import { Consumer } from "../AppContext";
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 const Movies = () => (
   <Consumer>
@@ -39,6 +40,11 @@ const Movies = () => (
                 </button>
               </div>
             )}
+            <ScrollUpButton
+              StopPosition={0}
+              ShowAtPosition={1250}
+              ContainerClassName="arrow"
+            />
           </div>
         </section>
       );

@@ -737,4 +737,16 @@ footer ul li a {
   footer ul li {
     width: 27%;
   }
+
+  .arrow {
+    height: 20px !important;
+    width: 20px !important;
+  }
+}
+
+/* ScrollUpButton Component */
+.arrow {
+  background: none !important;
+  fill: #333 !important;
+  bottom: 90px !important;
 }

@@ -59,7 +59,7 @@ class Search extends Component {
 
     if (searchResults.length > 0) {
       return (
-        <div className="Search-result-container">
+        <div className="Search-result-container" id="here">
           {searchResults.map(result => (
             <div
               key={result.id}
