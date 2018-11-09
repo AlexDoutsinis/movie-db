@@ -1,6 +1,6 @@
 import React from "react";
 import Movie from "./Movie";
-import { Consumer } from "../AppContext";
+import { Consumer } from "../containers/AppContext";
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 const Movies = () => (

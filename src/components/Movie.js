@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ellipsize from "ellipsize";
-import { Consumer } from "../AppContext";
+import { Consumer } from "../containers/AppContext";
 import { Link } from "react-router-dom";
 
 const Movie = ({ movie }) => {

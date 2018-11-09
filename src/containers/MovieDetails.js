@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
 import Slider from "react-slick";
-import Loader from "./Loader";
+import Loader from "../components/Loader";
 
 const api = "https://api.themoviedb.org/3/movie";
 const poster_path_size = "http://image.tmdb.org/t/p/w185";
@@ -194,5 +195,9 @@ class MovieDetails extends Component {
     );
   }
 }
+
+MovieDetails.propTypes = {
+  match: PropTypes.object.isRequired
+};
 
 export default MovieDetails;

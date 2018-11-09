@@ -1,5 +1,5 @@
 import React from "react";
-import { Consumer } from "../AppContext";
+import { Consumer } from "../containers/AppContext";
 import Swiper from "react-id-swiper";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";

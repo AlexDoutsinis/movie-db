@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Hero from "./Hero";
-import Search from "./Search";
+import Search from "../containers/Search";
 import Movies from "./Movies";
 
 const Home = () => (
