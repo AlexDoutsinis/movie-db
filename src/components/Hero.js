@@ -24,7 +24,7 @@ const Hero = () => (
           const bgImageStyles = {
             backgroundImage:
               movie.backdrop_path &&
-              `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backdrop_path_size}${
+              `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backdrop_path_size}${
                 movie.backdrop_path
               })`,
             textDecoration: "none"

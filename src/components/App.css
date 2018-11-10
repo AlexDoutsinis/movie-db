@@ -885,6 +885,11 @@ footer ul li a {
   .movie-box {
     font-size: 11px;
   }
+
+  footer div,
+  .movies .btn-box {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 376px) {
