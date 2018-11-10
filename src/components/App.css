@@ -720,9 +720,13 @@ footer ul li a {
   }
 
   .hero-content,
-  .Search-result-container,
   footer div {
     font-size: 12px;
+  }
+
+  .Search-result-container {
+    font-size: 12px;
+    max-height: 200px;
   }
 
   .movies .btn-box {
@@ -777,7 +781,7 @@ footer ul li a {
   }
 
   .movie-box {
-    width: 40%;
+    width: 55%;
     font-size: 12px;
     margin: 8% 25% 3% 25%;
   }
@@ -862,6 +866,24 @@ footer ul li a {
   .arrow {
     height: 20px !important;
     width: 20px !important;
+  }
+}
+
+@media (max-height: 426px) {
+  header .nav-bar li:first-child {
+    padding: 2px 6px;
+  }
+
+  header .nav-bar li:first-child {
+    font-size: 0.6em;
+  }
+
+  .hero-content {
+    top: 35vh;
+  }
+
+  .movie-box {
+    font-size: 11px;
   }
 }
 
