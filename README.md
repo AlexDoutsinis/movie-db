@@ -30,7 +30,7 @@ git clone git@github.com:Alexiosdut/movie-db.git
 yarn install
 ```
 
-3. Get your own API key [here](https://developers.themoviedb.org/3/getting-started/introduction) by making an account
+3. Get your own API key [here](https://www.themoviedb.org/) by making an account
 
 4. Create a ".env" file and put your key in a REACT_APP_API_KEY variable like this
 
