@@ -53,7 +53,7 @@ Enjoy :)
 ## Built With
 
 - [React](https://reactjs.org/) - The JavaScript framework used
-- [React Context](https://reactjs.org/docs/context.html) - State Management
+- [Context](https://reactjs.org/docs/context.html) - State Management
 - [React Router](https://reacttraining.com/react-router/) - Navigation
 - [TMDB](https://www.themoviedb.org/) - The Movie DB
 
