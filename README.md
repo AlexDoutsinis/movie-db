@@ -60,14 +60,3 @@ Enjoy :)
 ## Contributors
 
 - **Alexis Doutsinis**
-
-Viewport
-Window
-×
-×
-×
-Viewport
-Window
-×
-×
-×
