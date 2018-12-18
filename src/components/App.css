@@ -20,7 +20,7 @@ header .nav-bar {
 
 header .nav-bar li:first-child {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1em;
   border: solid #f5c518 1px;
   padding: 4px 8px;
   background-color: #f5c518;
@@ -329,25 +329,25 @@ footer ul li a {
   font-weight: 400;
   letter-spacing: 1px;
   margin-top: 2%;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 .rating {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-top: 1.5%;
   margin-right: 0.7%;
 }
 
 .vote {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 300;
 }
 
 .genres {
   margin-top: 1%;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .genresList {
@@ -372,7 +372,7 @@ footer ul li a {
 }
 
 .overview-text {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .cast-box {
@@ -386,7 +386,7 @@ footer ul li a {
 
 .cast-text {
   margin: 1% 0 2.5% 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .slick-prev:before,
@@ -402,7 +402,7 @@ footer ul li a {
 }
 
 .text {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 400;
   margin: 4% 0;
 }
@@ -878,12 +878,20 @@ footer ul li a {
     font-size: 0.6em;
   }
 
+  .hero-box {
+    height: 90vh;
+  }
+
   .hero-content {
-    top: 35vh;
+    top: 60vh;
   }
 
   .movie-box {
     font-size: 11px;
+  }
+
+  .img-backdrop {
+    height: 60vh;
   }
 
   footer div,

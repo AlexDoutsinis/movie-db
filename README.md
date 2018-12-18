@@ -55,7 +55,7 @@ Enjoy :)
 - [React](https://reactjs.org/) - The JavaScript framework used
 - [Context](https://reactjs.org/docs/context.html) - State Management
 - [React Router](https://reacttraining.com/react-router/) - Navigation
-- [TMDB](https://www.themoviedb.org/) - The Movie DB
+- [TMDB](https://www.themoviedb.org/) - API used
 
 ## Contributors
 
